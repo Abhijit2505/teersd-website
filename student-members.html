@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>TEERSD 2023</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" /> -->
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        table {
+            width: 750px;
+            border-collapse: collapse;
+            margin: 50px auto;
+        }
+        /* Zebra striping */
+        
+        tr:nth-of-type(odd) {
+            background: #eee;
+        }
+        
+        th {
+            background: #4AA3DD;
+            color: white;
+            font-weight: bold;
+        }
+        
+        td,
+        th {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+            font-size: 18px;
+        }
+        /* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+        
+        @media only screen and (max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px) {
+            table {
+                width: 100%;
+            }
+            /* Force table to not be like tables anymore */
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+            /* Hide table headers (but not display: none;, for accessibility) */
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr {
+                border: 1px solid #ccc;
+            }
+            td {
+                /* Behave  like a "row" */
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+            }
+            td:before {
+                /* Now like a table header */
+                position: absolute;
+                /* Top/left values mimic padding */
+                top: 6px;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                /* Label the data */
+                content: attr(data-column);
+                color: #000;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+
+    <header style="background-color:#101130" class="header navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="nav-inner">
+
+                        <nav class="navbar navbar-expand-lg">
+                            <a style="color:white;font-size:200%;" class="navbar-brand" href="index.html">
+                                TEERSD 2023
+                            </a>
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Conference</a>
+                                        <ul class="sub-menu collapse" id="submenu-1-1">
+                                            <li class="nav-item"><a href="keynote-lectures.html">Keynote Lectures</a>
+                                            </li>
+                                            <li class="nav-item"><a href="conf-highlights.html">Highlights of the conference</a>
+                                            </li>
+                                            <li class="nav-item"><a href="about.html">About Us</a></li>
+                                            <!-- <li class="nav-item"><a href="pricing.html">Call for 11th TEERSD Proposal 2023</a></li> -->
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">For Authors &
+                                            Listeners</a>
+                                        <ul class="sub-menu collapse" id="submenu-1-2">
+                                            <li class="nav-item"><a href="important-dates.html">Important Dates</a>
+                                            </li>
+                                            <li class="nav-item"><a href="registration-process.html">Registration Process</a></li>
+                                            <!-- <li class="nav-item"><a href="pricing.html">Call for 11th TEERSD Proposal 2023</a></li> -->
+                                            <li class="nav-item"><a href="fees-bank-details.html">Fees & Bank Details</a></li>
+
+                                            <li class="nav-item"><a href="abstract-selection.html">Abstract Selection & Manuscript Submission</a></li>
+                                            <li class="nav-item"><a href="accommodation.html">Accommodation</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">For Reviewers and
+                                            Session Organizers</a>
+                                        <ul class="sub-menu collapse" id="submenu-1-1">
+                                            <li class="nav-item"><a href="reviewer-guidelines.html">Reviewer guidelines</a>
+                                            </li>
+                                            <li class="nav-item"><a href="special-sessions.html">Call for special sessions</a></li>
+                                            <li class="nav-item"><a href="pricing.html">Call for 11th TEERSD Proposal 2023</a></li> -->
+                                    <!-- <li class="nav-item"><a href="outstanding-reviewer.html">Outstanding reviewer award </a>
+                                    </li> -->
+
+                                    <!-- 
+                                </ul>
+                                </li> -->
+                                    <li class="nav-item">
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">People</a>
+                                        <ul class="sub-menu collapse" id="submenu-1-3">
+                                            <li class="nav-item"><a href="advisory-board.html">Advisory Board</a>
+                                            </li>
+                                            <li class="nav-item"><a href="international-advisory-board.html">International Advisory Committee</a></li>
+                                            <li class="nav-item"><a href="national-advisory-board.html">National Advisory Committee</a></li>
+                                            <li class="nav-item"><a href="organizing-committee.html">Organizing Committee</a></li>
+
+
+
+                                        </ul>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Past Conferences</a>
+                                        <ul class="sub-menu collapse" id="submenu-1-1">
+                                            <li class="nav-item"><a href="https://sites.google.com/site/TEERSD2019/">TEERSD 2019</a>
+                                            </li>
+                                            <li class="nav-item"><a href="https://sites.google.com/site/TEERSD2018/">TEERSD 2018</a></li>
+                                            <li class="nav-item"><a href="https://sites.google.com/site/TEERSD2019/TEERSD2017">TEERSD 2017</a></li>
+                                            <li class="nav-item"><a href="https://sites.google.com/site/TEERSD2019/TEERSD2016">TEERSD 2016</a></li>
+                                            <li class="nav-item"><a href="https://sites.google.com/site/TEERSD2019/TEERSD2015">TEERSD 2015</a></li>
+                                            <li class="nav-item"><a href="https://sites.google.com/site/TEERSD2019/TEERSD2014">TEERSD 2014</a></li>
+                                            <li class="nav-item"><a href="https://sites.google.com/site/TEERSD2019/TEERSD2013">TEERSD 2013</a></li>
+                                        </ul>
+                                    </li> -->
+                                </ul>
+                            </div>
+
+
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section style="padding-top:180px;" class="events-schedule section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h3 class="wow zoomIn" data-wow-delay=".2s">Committee</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Student Members</h2>
+                        <!-- <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <table>
+                    <!-- <thead>
+                        <tr>
+                            <th>Context</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead> -->
+                    <tbody>
+                        <tr>
+                            <td data-column=""><img style="height:180px;width:180px;" src="https://i.postimg.cc/G3PGr1Dm/abhishek.jpg">&nbsp;&nbsp;Abhishek Singh Thakur</td>
+                            <td data-column=""><b>PhD Scholar</b></td>
+                        </tr>
+                        <tr>
+                            <td data-column=""><img style="height:180px;width:180px;" src="https://i.postimg.cc/mrxgtPff/rakhi.png">&nbsp;&nbsp;Rakhi Soni</td>
+                            <td data-column=""><b>PhD Scholar</b></td>
+                        </tr>
+                        <tr>
+                            <td data-column=""><img style="height:180px;width:180px;" src="https://i.postimg.cc/wTgqKC5H/rupali-mishra.jpg">&nbsp;&nbsp;Rupali Mishra</td>
+                            <td data-column=""><b>Undergraduate</b></td>
+                        </tr>
+                        <tr>
+                            <td data-column=""><img style="height:180px;width:180px;" src="https://i.postimg.cc/m2jbTmV9/pranjali.png">&nbsp;&nbsp;Pranjali Shrivastava</td>
+                            <td data-column=""><b>Undergraduate</b></td>
+                        </tr>
+                        <tr>
+                            <td data-column=""><img style="height:180px;width:180px;" src="https://i.postimg.cc/VsFrpWyS/nandini.jpg">&nbsp;&nbsp;Nandini Dixit</td>
+                            <td data-column=""><b>Undergraduate</b></td>
+                        </tr>
+                        <tr>
+                            <td data-column=""><img style="height:180px;width:180px;" src="https://i.postimg.cc/CLQ1pvcK/komal-mishra.jpg">&nbsp;&nbsp;Komal Mishra</td>
+                            <td data-column=""><b>Undergraduate</b></td>
+                        </tr>
+                        <tr>
+                            <td data-column=""><img style="height:180px;width:180px;" src="https://i.postimg.cc/ZnjWN4PP/danbjit.jpg">&nbsp;&nbsp;Dhanjit Rabongshi</td>
+                            <td data-column=""><b>Undergraduate</b></td>
+                        </tr>
+                        <tr>
+                            <td data-column=""><img style="height:180px;width:180px;" src="https://i.postimg.cc/wj3dgg1K/saswat-tiwari.png">&nbsp;&nbsp;Shashwat Tiwari</td>
+                            <td data-column=""><b>Undergraduate</b></td>
+                        </tr>
+                        <tr>
+                            <td data-column=""><img style="height:180px;width:180px;" src="https://i.postimg.cc/NfJyfGjB/lokendra.jpg">&nbsp;&nbsp;Lokendra Singh Chandel</td>
+                            <td data-column=""><b>Undergraduate</b></td>
+                        </tr>
+                        <tr>
+                            <td data-column=""><img style="height:180px;width:180px;" src="https://i.postimg.cc/P5vqXm7Q/ghanshyam.png">&nbsp;&nbsp;Ghanshyam</td>
+                            <td data-column=""><b>Undergraduate</b></td>
+                        </tr>
+                        <tr>
+                            <td data-column=""><img style="height:180px;width:180px;" src="https://i.postimg.cc/tg402yHv/niranjan.jpg">&nbsp;&nbsp;Niranjan Roy</td>
+                            <td data-column=""><b>Undergraduate</b></td>
+                        </tr>
+                        <tr>
+                            <td data-column=""><img style="height:180px;width:180px;" src="https://i.postimg.cc/P5FTwNgr/dushyant-singh.png">&nbsp;&nbsp;Dushyant Singh Karel</td>
+                            <td data-column=""><b>Undergraduate</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-12">
+
+                            <div class="single-footer f-about">
+                                <div class="logo">
+                                    <a style="font-size:180%;color:black;" href="index.html">
+                                        TEERSD 2023
+                                    </a>
+                                </div>
+                                <p>The TEERSD is an international conference that aims to discuss the current trends and research in the field of energy and environmental management and how they are evolving to overcome challenges and prepare for future
+                                    growth.
+                                </p>
+                                <span class="social-title">
+                                    Follow Us On:
+                                </span>
+                                <ul class="social">
+                                    <li>
+                                        <a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"><i class="lni lni-twitter-filled"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"><i class="lni lni-instagram-filled"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-12">
+
+                            <div class="single-footer f-link">
+                                <h3>Quick Links</h3>
+                                <ul>
+                                    <li><a href="keynote-lectures.html">Keynote Lectures</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="important-dates.html">Important Dates</a></li>
+                                    <li><a href="registration-process.html">Registration Process</a></li>
+                                    <li><a href="Registration_Form_TEERSD-2023_15.06.23.pdf">Registration Form</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-12">
+
+                            <div class="single-footer f-link">
+                                <h3>Know More</h3>
+                                <ul>
+                                    <li><a href="fees-bank-details.html">Fees & Bank Details</a></li>
+                                    <li><a href="accommodation.html">Accommodation</a></li>
+                                    <li><a href="advisory-board.html">Advisory Board</a></li>
+                                    <li><a href="organizing-committee.html">Organizing Committee</a></li>
+                                    <li><a href="mailto:teersd2023@gmail.com">Mail Us</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+
+                            <div class="single-footer newsletter">
+                                <h3>Subscribe to our newsletter</h3>
+                                <form action="#" method="get" target="_blank" class="newsletter-form">
+                                    <input name="name" placeholder="Your Name*" required="required" type="text">
+                                    <input name="email" placeholder="Email address*" required="required" type="email">
+                                    <div class="button">
+                                        <button class="btn">Subscribe
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="copyright">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="copyright-text">Designed and Developed by <a href="https://www.presear.com/" rel="nofollow" target="_blank">Presear Softwares PVT LTD</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <a href="#" class="scroll-top">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/count-up.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        //========= glightbox
+        GLightbox({
+            'href': 'https://www.youtube.com/watch?v=Gxw45q3Ga3k',
+            'type': 'video',
+            'source': 'youtube', //vimeo, youtube or local
+            'width': 900,
+            'autoplayVideos': true,
+        });
+
+        //========= testimonial 
+        tns({
+            container: '.testimonial-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            mouseDrag: true,
+            gutter: 0,
+            nav: true,
+            controls: false,
+            controlsText: ['<i class="lni lni-arrow-left"></i>', '<i class="lni lni-arrow-right"></i>'],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                540: {
+                    items: 1,
+                },
+                768: {
+                    items: 2,
+                },
+                992: {
+                    items: 2,
+                },
+                1170: {
+                    items: 3,
+                }
+            }
+        });
+    </script>
+    <script>
+        const finaleDate = new Date("February 15, 2023 00:00:00").getTime();
+
+        const timer = () => {
+            const now = new Date().getTime();
+            let diff = finaleDate - now;
+            if (diff < 0) {
+                document.querySelector('.alert').style.display = 'block';
+                document.querySelector('.container').style.display = 'none';
+            }
+
+            let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            let hours = Math.floor(diff % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+            let minutes = Math.floor(diff % (1000 * 60 * 60) / (1000 * 60));
+            let seconds = Math.floor(diff % (1000 * 60) / 1000);
+
+            days <= 99 ? days = `0${days}` : days;
+            days <= 9 ? days = `00${days}` : days;
+            hours <= 9 ? hours = `0${hours}` : hours;
+            minutes <= 9 ? minutes = `0${minutes}` : minutes;
+            seconds <= 9 ? seconds = `0${seconds}` : seconds;
+
+            document.querySelector('#days').textContent = days;
+            document.querySelector('#hours').textContent = hours;
+            document.querySelector('#minutes').textContent = minutes;
+            document.querySelector('#seconds').textContent = seconds;
+
+        }
+        timer();
+        setInterval(timer, 1000);
+    </script>
+</body>
+
+</html>
