@@ -15,6 +15,87 @@
     <link rel="stylesheet" href="assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+    table {
+        width: 90%;
+        max-width: 750px;
+        border-collapse: collapse;
+        margin: 50px auto;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    }
+
+    thead th {
+        background: #4AA3DD;
+        color: white;
+        font-weight: bold;
+        text-align: left;
+        padding: 12px;
+    }
+
+    tbody td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        vertical-align: top;
+    }
+
+    tbody tr:nth-of-type(odd) {
+        background: #f9f9f9;
+    }
+
+    tbody tr:nth-of-type(even) {
+        background: #fff;
+    }
+
+    td b, td strong {
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Responsive styles */
+    @media only screen and (max-width: 760px),
+    (min-device-width: 768px) and (max-device-width: 1024px) {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        thead tr {
+            display: none;
+        }
+
+        tr {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background: white;
+        }
+
+        td {
+            position: relative;
+            padding-left: 50%;
+            border: none;
+            border-bottom: 1px solid #eee;
+        }
+
+        td:before {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            content: attr(data-column);
+            font-weight: bold;
+            color: #000;
+        }
+    }
+</style>
+
 </head>
 
 <body>
@@ -51,7 +132,7 @@
                                         <ul class="sub-menu collapse" id="submenu-1-1">
                                             <li class="nav-item"><a href="keynote-lectures.html">Keynote Lectures</a>
                                             </li>
-                                            <li class="nav-item"><a href="conf-highlights.html">Highlights of the conference</a>
+                                            <li class="nav-item"><a href="conf-highlights.html">Highlights & Schedule</a>
                                             </li>
                                             <li class="nav-item"><a href="about.html">About Us</a></li>
                                             <!-- <li class="nav-item"><a href="pricing.html">Call for 12th TEERSD Proposal 2025</a></li> -->
@@ -92,9 +173,9 @@
                                         <ul class="sub-menu collapse" id="submenu-1-3">
                                             <li class="nav-item"><a href="advisory-board.html">Advisory Board</a>
                                             </li>
-                                            <!-- <li class="nav-item"><a href="international-advisory-board.html">International Advisory Committee</a></li> -->
-                                             <!-- <li class="nav-item"><a href="national-advisory-board.html">National Advisory Committee</a></li> -->
-                                             <!-- <li class="nav-item"><a href="organizing-committee.html">Organizing Committee</a></li> -->
+<li class="nav-item"><a href="international-advisory-board.html">International Advisory Committee</a></li> 
+                                             <li class="nav-item"><a href="national-advisory-board.html">National Advisory Committee</a></li>
+                                             <li class="nav-item"><a href="organizing-committee.html">Organizing Committee</a></li>
 
 
 
@@ -145,7 +226,7 @@
                             </div>
                         </div><br><br>
                         <h4>Conference Highlights</h4>
-                        <h3>TRENDS IN ENERGY AND ENVIRONMENTAL RESEARCH FOR SUSTAINABLE DEVELOPMENT [TEERSD - 2025]
+                        <h3>TRENDS IN ENERGY AND ENVIRONMENTAL RESEARCH FOR SUSTAINABLE DEVELOPMENT [TEERSD III - 2025]
                         </h3>
 
                         <!-- <h3><span style="font-size: 170%;color:#F20487">1.</span> Manuscript Preparation</h3> -->
@@ -170,6 +251,118 @@
                     </div>
 
                 </div>
+                <div class="row">
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Particular</th>
+                <th>Keynote Speaker</th>
+                <th>Session Chair</th>
+                <th>Session Co-chair</th>
+                <th>Theme</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Day I -->
+            <tr><td colspan="6" style="font-weight: bold; text-align: center;">Day I: December 11, 2024 (Thursday)</td></tr>
+            <tr>
+                <td>10:30 AM - 11:30 AM</td>
+                <td><b>Inaugural Session</b></td>
+                <td colspan="4">—</td>
+            </tr>
+            <tr>
+                <td>11:30 AM - 11:50 AM</td>
+                <td><b>High Tea</b></td>
+                <td colspan="4">—</td>
+            </tr>
+            <tr>
+                <td>11:50 AM - 01:30 PM</td>
+                <td><b>Session-1</b></td>
+                <td><b>Prof. A. Seshagirirao</b> (IIPE)</td>
+                <td><b>Dr. R. Manivannan</b> (NIT Raipur) / <b>GM-NTPC</b></td>
+                <td><b>Dr. Saurabh Meshram</b></td>
+                <td><b>Novel Separation Process</b></td>
+            </tr>
+            <tr>
+                <td>01:30 PM - 02:20 PM</td>
+                <td><b>Lunch Break</b></td>
+                <td colspan="4">—</td>
+            </tr>
+            <tr>
+                <td>02:30 PM - 03:45 PM</td>
+                <td><b>Session-2</b></td>
+                <td><b>Prof. Sirshendu De</b> (IIT Kharagpur)</td>
+                <td><b>Prof. K.L. Wasewar</b> (VNIT)</td>
+                <td><b>Dr. S. Dharmadhikari</b></td>
+                <td><b>Waste to Wealth and Waste Management Technology</b></td>
+            </tr>
+            <tr>
+                <td>03:45 PM - 04:00 PM</td>
+                <td><b>Tea Break</b></td>
+                <td colspan="4">—</td>
+            </tr>
+            <tr>
+                <td>04:00 PM - 05:30 PM</td>
+                <td><b>Session-3</b></td>
+                <td><b>Prof. B. Munshi</b> (NIT Rourkela)</td>
+                <td><b>Dr. Sai Phani Kumar.V</b> (IISER) / <b>GM-NTPC</b></td>
+                <td><b>Dr. Ghoshna Jyoti</b></td>
+                <td><b>Sustainable Energy and Green Energy</b></td>
+            </tr>
+
+            <!-- Day II -->
+            <tr><td colspan="6" style="font-weight: bold; text-align: center;">Day II: December 12, 2024 (Friday)</td></tr>
+            <tr>
+                <td>10:30 AM - 12:00 PM</td>
+                <td><b>Session-4</b></td>
+                <td><b>Prof. P.N. Rao</b> (IIT Guwahati)</td>
+                <td><b>Dr. R.P. Vijay Kumar</b> (VNIT) / <b>GM-NTPC</b></td>
+                <td><b>Dr. Pankaj Kumar</b></td>
+                <td><b>Renewable Fuels (RF)</b></td>
+            </tr>
+            <tr>
+                <td>12:00 PM - 12:15 PM</td>
+                <td><b>Tea Break</b></td>
+                <td colspan="4">—</td>
+            </tr>
+            <tr>
+                <td>12:20 PM - 01:45 PM</td>
+                <td><b>Session-5</b></td>
+                <td><b>Dr. A.G. Rao</b> (CSIR-IICT)</td>
+                <td><b>Dr. Somasekhar Sonti</b> (IIT Dharwad) / <b>GM-NTPC</b></td>
+                <td><b>Dr. G. P. Dewangan</b></td>
+                <td><b>Modelling and Simulation</b></td>
+            </tr>
+            <tr>
+                <td>01:45 PM - 02:30 PM</td>
+                <td><b>Lunch Break</b></td>
+                <td colspan="4">—</td>
+            </tr>
+            <tr>
+                <td>02:30 PM - 04:00 PM</td>
+                <td><b>Session-6</b></td>
+                <td><b>Dr. Ramadayal Panda</b> (MNIT Jaipur)</td>
+                <td><b>Dr. Amit Jain</b> (GGV Bilaspur)</td>
+                <td><b>Dr. R.S. Thakur</b></td>
+                <td><b>Miscellaneous</b></td>
+            </tr>
+            <tr>
+                <td>04:00 PM - 04:15 PM</td>
+                <td><b>Tea Break</b></td>
+                <td colspan="4">—</td>
+            </tr>
+            <tr>
+                <td>04:15 PM - 05:15 PM</td>
+                <td><b>Valedictory</b></td>
+                <td colspan="4">—</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
                 <div style="padding-top:20px;" class="col-lg-3 col-md-2 col-12">
                     <div class="button">
                         <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScHC7bOS9G46WWEAb2_ST2cceB1itLZtJ_p2kpcKnCIsX5mcw/viewform?usp=pp_url">Register Here</a>

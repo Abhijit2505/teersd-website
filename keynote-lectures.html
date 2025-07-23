@@ -16,82 +16,85 @@
     <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-        table {
-            width: 750px;
-            border-collapse: collapse;
-            margin: 50px auto;
-        }
-        /* Zebra striping */
-        
-        tr:nth-of-type(odd) {
-            background: #eee;
-        }
-        
-        th {
-            background: #F20487;
-            color: white;
-            font-weight: bold;
-        }
-        
+    table {
+        width: 90%;
+        max-width: 750px;
+        border-collapse: collapse;
+        margin: 50px auto;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    }
+
+    thead th {
+        background: #4AA3DD;
+        color: white;
+        font-weight: bold;
+        text-align: left;
+        padding: 12px;
+    }
+
+    tbody td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        vertical-align: top;
+    }
+
+    tbody tr:nth-of-type(odd) {
+        background: #f9f9f9;
+    }
+
+    tbody tr:nth-of-type(even) {
+        background: #fff;
+    }
+
+    td b, td strong {
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Responsive styles */
+    @media only screen and (max-width: 760px),
+    (min-device-width: 768px) and (max-device-width: 1024px) {
+        table,
+        thead,
+        tbody,
+        th,
         td,
-        th {
+        tr {
+            display: block;
+        }
+
+        thead tr {
+            display: none;
+        }
+
+        tr {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
             padding: 10px;
-            border: 1px solid #ccc;
-            text-align: left;
-            font-size: 18px;
+            background: white;
         }
-        /* 
-Max width before this PARTICULAR table gets nasty
-This query will take effect for any screen smaller than 760px
-and also iPads specifically.
-*/
-        
-        @media only screen and (max-width: 760px),
-        (min-device-width: 768px) and (max-device-width: 1024px) {
-            table {
-                width: 100%;
-            }
-            /* Force table to not be like tables anymore */
-            table,
-            thead,
-            tbody,
-            th,
-            td,
-            tr {
-                display: block;
-            }
-            /* Hide table headers (but not display: none;, for accessibility) */
-            thead tr {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-            tr {
-                border: 1px solid #ccc;
-            }
-            td {
-                /* Behave  like a "row" */
-                border: none;
-                border-bottom: 1px solid #eee;
-                position: relative;
-                padding-left: 50%;
-            }
-            td:before {
-                /* Now like a table header */
-                position: absolute;
-                /* Top/left values mimic padding */
-                top: 6px;
-                left: 6px;
-                width: 45%;
-                padding-right: 10px;
-                white-space: nowrap;
-                /* Label the data */
-                content: attr(data-column);
-                color: #000;
-                font-weight: bold;
-            }
+
+        td {
+            position: relative;
+            padding-left: 50%;
+            border: none;
+            border-bottom: 1px solid #eee;
         }
-    </style>
+
+        td:before {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            content: attr(data-column);
+            font-weight: bold;
+            color: #000;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -138,7 +141,7 @@ and also iPads specifically.
                                         <ul class="sub-menu collapse" id="submenu-1-1">
                                             <li class="nav-item"><a href="keynote-lectures.html">Keynote Lectures</a>
                                             </li>
-                                            <li class="nav-item"><a href="conf-highlights.html">Highlights of the conference</a>
+                                            <li class="nav-item"><a href="conf-highlights.html">Highlights & Schedule</a>
                                             </li>
                                             <li class="nav-item"><a href="about.html">About Us</a></li>
                                             <!-- <li class="nav-item"><a href="pricing.html">Call for 12th TEERSD Proposal 2025</a></li> -->
@@ -165,9 +168,9 @@ and also iPads specifically.
                                         <ul class="sub-menu collapse" id="submenu-1-3">
                                             <li class="nav-item"><a href="advisory-board.html">Advisory Board</a>
                                             </li>
-                                            <!-- <li class="nav-item"><a href="international-advisory-board.html">International Advisory Committee</a></li> -->
-                                             <!-- <li class="nav-item"><a href="national-advisory-board.html">National Advisory Committee</a></li> -->
-                                             <!-- <li class="nav-item"><a href="organizing-committee.html">Organizing Committee</a></li> -->
+<li class="nav-item"><a href="international-advisory-board.html">International Advisory Committee</a></li> 
+                                             <li class="nav-item"><a href="national-advisory-board.html">National Advisory Committee</a></li>
+                                             <li class="nav-item"><a href="organizing-committee.html">Organizing Committee</a></li>
 
 
 
@@ -195,7 +198,107 @@ and also iPads specifically.
                     </div>
                 </div>
             </div>
-            <p>Coming Soon</p>
+            
+            <div class="row">
+                <table>
+    <thead>
+        <tr>
+            <th>Time</th>
+            <th>Session</th>
+            <th>Speaker 1</th>
+            <th>Affiliation 1</th>
+            <th>Speaker 2 / Chair</th>
+            <th>Affiliation 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Day I -->
+        <tr><td colspan="6" style="font-weight: bold; text-align: center;">Day I: December 11, 2024 (Thursday)</td></tr>
+        <tr>
+            <td>10:30 AM - 11:30 AM</td>
+            <td><strong>Inaugural Session</strong></td>
+            <td colspan="4">—</td>
+        </tr>
+        <tr>
+            <td>11:30 AM - 12:30 PM</td>
+            <td>Keynote Speaker</td>
+            <td>Prof. A. Seshagirirao</td>
+            <td>IIPE, Visakhapatnam</td>
+            <td>Dr. R. Manivannan / Dr. A.K. Tripathi</td>
+            <td>NIT Raipur / GM-NTPC</td>
+        </tr>
+        <tr>
+            <td>12:30 PM - 1:30 PM</td>
+            <td>High Tea</td>
+            <td colspan="4">—</td>
+        </tr>
+        <tr>
+            <td>1:30 PM - 2:30 PM</td>
+            <td>Keynote Speaker</td>
+            <td>Prof. Sirshendu De</td>
+            <td>IIT Kharagpur</td>
+            <td>Prof. K.L. Wasewar</td>
+            <td>VNIT Nagpur</td>
+        </tr>
+        <tr>
+            <td>2:30 PM - 3:30 PM</td>
+            <td>Lunch Break</td>
+            <td colspan="4">—</td>
+        </tr>
+        <tr>
+            <td>3:30 PM - 4:30 PM</td>
+            <td>Keynote Speaker</td>
+            <td>Prof. B. Munshi</td>
+            <td>NIT Rourkela</td>
+            <td>Dr. Sai Phani Kumar V.</td>
+            <td>IISER Bhopal / GM-NTPC</td>
+        </tr>
+        <tr>
+            <td>4:30 PM - 5:30 PM</td>
+            <td>Tea Break</td>
+            <td colspan="4">—</td>
+        </tr>
+
+        <!-- Day II -->
+        <tr><td colspan="6" style="font-weight: bold; text-align: center;">Day II: December 12, 2024 (Friday)</td></tr>
+        <tr>
+            <td>10:30 AM - 11:30 AM</td>
+            <td>Keynote Speaker</td>
+            <td>Prof. P.N. Rao</td>
+            <td>IIT Gauhati</td>
+            <td>Dr. R. Vijay Kumar / Dr. A.K. Tripathi</td>
+            <td>VNIT Nagpur / GM-NTPC</td>
+        </tr>
+        <tr>
+            <td>11:30 AM - 12:30 PM</td>
+            <td>Tea Break</td>
+            <td colspan="4">—</td>
+        </tr>
+        <tr>
+            <td>12:30 PM - 1:30 PM</td>
+            <td>Keynote Speaker</td>
+            <td>Dr. A.G. Rao</td>
+            <td>CSIR-IICT, Hyderabad</td>
+            <td>Dr. Somasekhar Sonti / Dr. A.K. Tripathi</td>
+            <td>IIT Dharwad / GM-NTPC</td>
+        </tr>
+        <tr>
+            <td>1:30 PM - 2:30 PM</td>
+            <td>Lunch Break</td>
+            <td colspan="4">—</td>
+        </tr>
+        <tr>
+            <td>2:30 PM - 3:30 PM</td>
+            <td>Keynote Speaker</td>
+            <td>Dr. Ramadaya Panda</td>
+            <td>MNNIT Jaipur</td>
+            <td>Dr. Amit Jain</td>
+            <td>GGV Bilaspur</td>
+        </tr>
+    </tbody>
+</table>
+                </div>
+            <!-- <p>Coming Soon</p> -->
             <!-- <div class="row">
                 <table>
                     <thead>
